@@ -21,6 +21,7 @@ type linkedListInterface interface {
 	Retrieve(p Position) ElementType
 }
 
+/* Single LinkedList implementation place a header */
 type LinkedList struct {
 	Header Position
 }
