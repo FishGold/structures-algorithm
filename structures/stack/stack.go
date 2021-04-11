@@ -23,6 +23,7 @@ func NewStack() *Stask {
 	}
 }
 
+/* Stack implementation is a linked list with a header */
 type Stask struct {
 	Header PrtToNode
 }
