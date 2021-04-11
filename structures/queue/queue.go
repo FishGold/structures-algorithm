@@ -3,10 +3,10 @@ package queue
 import "errors"
 
 type ElementType interface{}
-type Array *[]ElementType
+type Array []ElementType
 
 func New(cap int) *Queue {
-	data := make([]ElementType, cap, cap)
+	data := make(Array, cap)
 	return &Queue{
 		Capacity: cap,
 		Front:    1,
@@ -31,7 +31,7 @@ type Queue struct {
 	Front    int
 	Rear     int
 	Size     int
-	Data     Array
+	Data     *Array
 }
 
 /* Return true if queue is empty */
